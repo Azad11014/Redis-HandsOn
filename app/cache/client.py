@@ -9,8 +9,17 @@
 import redis
 import os
 
+#this is for upstash
+# redis_client = redis.from_url(
+#     os.getenv("VPS_REDIS_URL"),
+#     decode_responses=True,
+# )
+
+#This is VPS
+CA_CERT_PATH = "ca.crt"
 redis_client = redis.from_url(
-    os.getenv("REDIS_URL"),
+    os.getenv("VPS_REDIS_URL"),
+    ssl_ca_certs=CA_CERT_PATH,  # Add the certificate!
     decode_responses=True,
 )
 
