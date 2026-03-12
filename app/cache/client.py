@@ -11,7 +11,7 @@ import os
 
 #this is for upstash
 # redis_client = redis.from_url(
-#     os.getenv("VPS_REDIS_URL"),
+#     os.getenv("REDIS_URL"),
 #     decode_responses=True,
 # )
 
